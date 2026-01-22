@@ -288,23 +288,23 @@ $$
 
 ### 2.3. Comparaison avec les résultats précédents
 
-- Partie 1 : on trouve déjà numériquement, pour $b=10$ ou $100$ :
-  $$
-  \int_0^b e^{-x^2}\,dx \approx \frac{\sqrt{\pi}}{2}\approx 0.8862269254.
-  $$
+- Partie 1 : on trouve déjà numériquement, pour $b=10$ ou $100$ : $\int_0^b e^{-x^2}\,dx \approx \frac{\sqrt{\pi}}{2}\approx 0.8862269254$.
 
 - Sur le carré $[0,b]^2$ :
-  $$
-  \iint_{[0,b]^2} e^{-(x^2+y^2)}dxdy =
-  \left(\int_0^b e^{-x^2}dx\right)^2
-  \to \left(\frac{\sqrt{\pi}}{2}\right)^2=\frac{\pi}{4}.
-  $$
+
+$$
+\iint_{[0,b]^2} e^{-(x^2+y^2)}dxdy =
+\left(\int_0^b e^{-x^2}dx\right)^2
+\to \left(\frac{\sqrt{\pi}}{2}\right)^2=\frac{\pi}{4}.
+$$
 
 - Sur le disque $D_R$ :
-  $$
-  \iint_{D_R} e^{-(x^2+y^2)}dxdy
-  =\pi(1-e^{-R^2}) \to \pi
-  $$
+  
+$$
+\iint_{D_R} e^{-(x^2+y^2)}dxdy
+=\pi(1-e^{-R^2}) \to \pi
+$$
+
   car le disque couvre **tout le plan** quand $R\to+\infty$ (et pas seulement un quadrant).
 
 ---
@@ -388,13 +388,9 @@ $$
 
 Ici :
 - Comme $Q(x,y)=\int_0^x e^{-(t^2+y^2)}dt$, on a
-  $$
-  \frac{\partial Q}{\partial x}=e^{-(x^2+y^2)}.
-  $$
+  $\frac{\partial Q}{\partial x}=e^{-(x^2+y^2)}.$
 - Comme $P(x,y)=-\int_0^y e^{-(x^2+s^2)}ds$, on a
-  $$
-  \frac{\partial P}{\partial y}=-e^{-(x^2+y^2)}.
-  $$
+  $\frac{\partial P}{\partial y}=-e^{-(x^2+y^2)}.$
 
 Donc :
 
