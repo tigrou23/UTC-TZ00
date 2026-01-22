@@ -137,10 +137,8 @@ public class Main2D {
 Sur un carré $[0,b]\times[0,b]$, la fonction se **factorise** :
 
 $$
-\iint_{[0,b]^2} e^{-(x^2+y^2)}\,dx\,dy
-=
-\left(\int_0^b e^{-x^2}\,dx\right)^2
-=
+\iint_{[0,b]^2} e^{-(x^2+y^2)}\,dx\,dy =
+\left(\int_0^b e^{-x^2}\,dx\right)^2 =
 \left(\frac{\sqrt{\pi}}{2}\,\mathrm{erf}(b)\right)^2.
 $$
 
@@ -154,10 +152,8 @@ Donc, numériquement (≈) :
 Quand $b\to +\infty$, le carré $[0,b]^2$ tend vers le **premier quadrant** $(x\ge 0, y\ge 0)$, et :
 
 $$
-\iint_{x\ge 0,\,y\ge 0} e^{-(x^2+y^2)}\,dx\,dy
-=
-\left(\int_0^{+\infty}e^{-x^2}\,dx\right)^2
-=
+\iint_{x\ge 0,\,y\ge 0} e^{-(x^2+y^2)}\,dx\,dy =
+\left(\int_0^{+\infty}e^{-x^2}\,dx\right)^2 =
 \frac{\pi}{4}.
 $$
 
@@ -234,8 +230,7 @@ Sur le disque : $0\le r\le R$ et $0\le \theta\le 2\pi$.
 Alors :
 
 $$
-\iint_{D_R} e^{-(x^2+y^2)}\,dx\,dy
-=
+\iint_{D_R} e^{-(x^2+y^2)}\,dx\,dy =
 \int_0^{2\pi}\int_0^R e^{-r^2}\,r\,dr\,d\theta.
 $$
 
@@ -249,8 +244,7 @@ Donc :
 
 $$
 \boxed{
-\iint_{D_R} e^{-(x^2+y^2)}\,dx\,dy
-=
+\iint_{D_R} e^{-(x^2+y^2)}\,dx\,dy =
 \pi\left(1-e^{-R^2}\right).
 }
 $$
@@ -268,21 +262,17 @@ $$
 Alors :
 
 $$
-I^2
-=
+I^2 =
 \left(\int_{-\infty}^{+\infty} e^{-x^2}\,dx\right)
-\left(\int_{-\infty}^{+\infty} e^{-y^2}\,dy\right)
-=
+\left(\int_{-\infty}^{+\infty} e^{-y^2}\,dy\right) =
 \iint_{\mathbb{R}^2} e^{-(x^2+y^2)}\,dx\,dy.
 $$
 
 En faisant tendre $R\to +\infty$ dans le résultat du disque :
 
 $$
-\iint_{\mathbb{R}^2} e^{-(x^2+y^2)}\,dx\,dy
-=
-\lim_{R\to\infty} \pi(1-e^{-R^2})
-=
+\iint_{\mathbb{R}^2} e^{-(x^2+y^2)}\,dx\,dy =
+\lim_{R\to\infty} \pi(1-e^{-R^2}) =
 \pi.
 $$
 
@@ -305,8 +295,7 @@ $$
 
 - Sur le carré $[0,b]^2$ :
   $$
-  \iint_{[0,b]^2} e^{-(x^2+y^2)}dxdy
-  =
+  \iint_{[0,b]^2} e^{-(x^2+y^2)}dxdy =
   \left(\int_0^b e^{-x^2}dx\right)^2
   \to \left(\frac{\sqrt{\pi}}{2}\right)^2=\frac{\pi}{4}.
   $$
@@ -334,10 +323,8 @@ La circulation est :
 
 $$
 \boxed{
-\int_C \vec V\cdot d\vec r
-=
-\int_C P\,dx + Q\,dy
-=
+\int_C \vec V\cdot d\vec r =
+\int_C P\,dx + Q\,dy =
 \int_{t_1}^{t_2}\Big(P(x(t),y(t))\,x'(t)+Q(x(t),y(t))\,y'(t)\Big)\,dt.
 }
 $$
@@ -394,8 +381,7 @@ Théorème de Green–Riemann (orientation positive) :
 
 $$
 \boxed{
-\oint_{\partial D} P\,dx + Q\,dy
-=
+\oint_{\partial D} P\,dx + Q\,dy =
 \iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\,dx\,dy.
 }
 $$
@@ -413,10 +399,8 @@ Ici :
 Donc :
 
 $$
-\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}
-=
-e^{-(x^2+y^2)}-(-e^{-(x^2+y^2)})
-=
+\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y} =
+e^{-(x^2+y^2)}-(-e^{-(x^2+y^2)}) =
 2e^{-(x^2+y^2)}.
 $$
 
@@ -424,8 +408,7 @@ Ainsi :
 
 $$
 \boxed{
-\iint_D e^{-(x^2+y^2)}\,dx\,dy
-=
+\iint_D e^{-(x^2+y^2)}\,dx\,dy =
 \frac12\oint_{\partial D}\big(P\,dx+Q\,dy\big).
 }
 $$
