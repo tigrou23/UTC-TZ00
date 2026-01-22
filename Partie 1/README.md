@@ -39,13 +39,16 @@ On va donc l’**approcher** en découpant l’intervalle $[a, b]$ en petits seg
 On choisit un **nombre de sous-intervalles** $n$ (par exemple $n = 1000$).
 
 - La longueur de chaque sous-intervalle est :
-  $$
-  h = \frac{b-a}{n}
-  $$
+
+$$
+h = \frac{b-a}{n}
+$$
+
 - Les points de discrétisation sont :
-  $$
-  x_i = a + i \cdot h \quad \text{pour } i = 0, 1, \dots, n
-  $$
+
+$$
+x_i = a + i \cdot h \quad \text{pour } i = 0, 1, \dots, n
+$$
 
 ---
 
@@ -110,11 +113,7 @@ Simpson combine l’idée des trapèzes avec une approximation **quadratique** (
 Formule :
 
 $$
-\int_a^b f(x)\,dx \approx \frac{h}{3} \left[
-f(x_0)
-+ 4 \sum_{i=1,3,5,\dots}^{n-1} f(x_i)
-+ 2 \sum_{i=2,4,6,\dots}^{n-2} f(x_i)
-+ f(x_n)
+\int_a^b f(x)\,dx \approx \frac{h}{3} \left[(x_0) + 4 \sum_{i=1,3,5,\dots}^{n-1} f(x_i) + 2 \sum_{i=2,4,6,\dots}^{n-2} f(x_i) + f(x_n)
 \right]
 $$
 
@@ -135,7 +134,7 @@ Pseudo-code :
 
 ### 1.6. Comparaison des méthodes (idée générale)
 
-- **Riemann (gauche)** : simple, mais précision limitée (erreur en gros $\mathcal{O}(h)$).
+- **Riemann (gauche)** : simple, mais précision limitée.
 - **Trapèzes** : plus précis, erreur $\mathcal{O}(h^2)$.
 - **Simpson** : encore plus précis, erreur $\mathcal{O}(h^4)$ (si $f$ est assez régulière).
 
@@ -148,7 +147,11 @@ Plus $n$ est grand (donc $h$ petit), plus le résultat est précis… mais plus 
 ### 2.1. Organisation des fichiers
 
 - `UnivariateFunction.java`  
-  → Interface fonctionnelle pour représenter une fonction $ f : \mathbb{R} \rightarrow \mathbb{R} $.
+  → Interface fonctionnelle pour représenter une fonction
+
+$$
+f : \mathbb{R} \rightarrow \mathbb{R}
+$$
 
 - `Integrator1D.java`  
   → Contient les trois méthodes d’intégration :
@@ -315,7 +318,7 @@ java src/Main1D
 
 ---
 
-## 4. Valeurs de référence pour $ \int_0^b e^{-x^2} dx $
+## 4. Valeurs de référence pour $\int_0^b e^{-x^2} dx$
 
 Mathématiquement, on sait que :
 
@@ -327,14 +330,12 @@ où `erf` est la **fonction d’erreur**.
 
 Quelques valeurs (approx.) :
 
-- $ \int_0^1 e^{-x^2} dx \approx 0{,}746824 $
-- $ \int_0^{10} e^{-x^2} dx \approx 0{,}886227 $
-- $ \int_0^{100} e^{-x^2} dx \approx 0{,}886227 $
+- $\int_0^1 e^{-x^2} dx \approx 0{,}746824$
+- $\int_0^{10} e^{-x^2} dx \approx 0{,}886227$
+- $\int_0^{100} e^{-x^2} dx \approx 0{,}886227$
 
 Remarque :  
-$$
-\int_0^{+\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \approx 0{,}886227
-$$
+$\int_0^{+\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \approx 0{,}886227$
 Donc pour $b = 10$ ou $b = 100$, on est **très proche** de l’intégrale sur $[0, +\infty[$.
 
 ---
